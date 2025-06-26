@@ -1,6 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
+// ✅ Import image the React/Vite way
+import forecastIcon from "../assets/image.png";
+
 export default function Weekly() {
   const navigate = useNavigate();
   const scrollRef = useRef(null);
@@ -42,9 +45,7 @@ export default function Weekly() {
     <div className="min-h-screen w-full flex items-center justify-center  text-white relative">
       <button 
         onClick={() => navigate("/today")}
-       className="fixed top-4 left-4 right z-50 rounded-full flex bg-white/20 justify-between px-4">
-
-      
+        className="fixed top-4 left-4 right z-50 rounded-full flex bg-white/20 justify-between px-4">
         Back
       </button>
 
@@ -83,7 +84,7 @@ export default function Weekly() {
                   >
                     <p className="mt-2 text-sm font-normal">{Math.round(item.max)}°C</p>
                     <img
-                      src="src/assets/image.png"
+                      src={forecastIcon}
                       alt="weather"
                       className="w-10 h-10"
                     />

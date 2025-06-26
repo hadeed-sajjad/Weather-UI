@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router";
 
+
+import weatherIcon from '../assets/Weather _))10 18.svg';
+import houseIcon from '../assets/House.svg';
+import hourlyIcon from '../assets/image.png';
+
 export default function weekly() {
   const navigate = useNavigate();
 
@@ -36,10 +41,8 @@ export default function weekly() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full   flex items-center justify-center text-white">
+    <div className="min-h-screen w-full flex items-center justify-center text-white">
       <div className="fixed top-4 left-4 right-4 z-50 flex justify-between px-4">
-
-
         <button
           onClick={() => navigate("/")}
           className="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium"
@@ -55,16 +58,16 @@ export default function weekly() {
       </div>
 
       <div className="w-full max-w-[428px] px-4 text-center">
-        <img src="src/assets/Weather _))10 18.svg" alt="Weather Icon" className="w-[244px] h-[244px] ml-12" />
+        <img src={weatherIcon} alt="Weather Icon" className="w-[244px] h-[244px] ml-12" />
         <h2 className="text-5xl font-normal mt-2">{currentTemp}</h2>
         <p className="text-lg">Precipitations</p>
         <p className="text-sm">Max: {maxTemp}° Min: {minTemp}°</p>
 
         <div className="my-1">
-          <img src="src/assets/House.svg" alt="Rain Animation" className="w-[336px] h-[198px]" />
+          <img src={houseIcon} alt="Rain Animation" className="w-[336px] h-[198px]" />
         </div>
 
-        <div className="w-[px] h-[200px] bg-white/10 rounded-xl mx-auto  p-4 flex flex-col justify-between shadow-lg text-white">
+        <div className="w-[px] h-[200px] bg-white/10 rounded-xl mx-auto p-4 flex flex-col justify-between shadow-lg text-white">
           <div className="flex justify-between px-2 text-sm font-medium text-white/90">
             <span>Today</span>
             <span>{new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })}</span>
@@ -74,7 +77,7 @@ export default function weekly() {
             {['15:00', '16:00', '17:00', '18:00'].map((label, i) => (
               <div className="flex flex-col items-center" key={label}>
                 <span className="text-sm">{hourlyTemps[i]}</span>
-                <img src="src/assets/image.png" alt={`${label} icon`} className="w-10 h-10 my-1" />
+                <img src={hourlyIcon} alt={`${label} icon`} className="w-10 h-10 my-1" />
                 <span className="text-xs">{label}</span>
               </div>
             ))}
@@ -82,7 +85,7 @@ export default function weekly() {
         </div>
 
         <button>
-          {/* No changes made here as requested */}
+          
         </button>
       </div>
     </div>

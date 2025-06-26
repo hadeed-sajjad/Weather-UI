@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router";
 
+// ✅ Import the weather icon
+import weatherIcon from "../assets/Weather _))10 18.svg";
+
 export default function Welcome() {
   const navigate = useNavigate();
 
@@ -8,7 +11,7 @@ export default function Welcome() {
       <div className="w-full max-w-[428px] px-4 flex flex-col items-center justify-center pb-2">
 
         <img
-          src="src/assets/Weather _))10 18.svg"
+          src={weatherIcon}
           alt="Weather Icon"
           className="w-[220px] sm:w-[300px] md:w-[428px] h-auto mb-6"
         />
