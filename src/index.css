@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+ 
