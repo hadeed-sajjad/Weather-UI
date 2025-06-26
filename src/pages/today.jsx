@@ -42,20 +42,20 @@ export default function weekly() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center text-white">
-      <div className="fixed top-4 left-4 right-4 z-50 flex justify-between px-4">
-        <button
-          onClick={() => navigate("/")}
-          className="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium"
-        >
-          Back
-        </button>
-        <button
-          onClick={() => navigate("/weekly")}
-          className="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium"
-        >
-          Weekly
-        </button>
-      </div>
+     <div className="fixed top-4 left-4 right-4 z-50 flex justify-between px-4 pointer-events-none">
+  <button
+    onClick={() => navigate("/")}
+    className="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium pointer-events-auto"
+  >
+    Back
+  </button>
+  <button
+    onClick={() => navigate("/weekly")}
+    className="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium pointer-events-auto"
+  >
+    Weekly
+  </button>
+</div>
 
       <div className="w-full max-w-[428px] px-4 text-center">
         <img src={weatherIcon} alt="Weather Icon" className="w-[244px] h-[244px] ml-12" />
